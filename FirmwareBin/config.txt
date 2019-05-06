@@ -132,6 +132,17 @@ delta_current                                 2.0              # 挤出机1的�
 
 
 
+# A axis
+delta_steps_per_mm                    53.3333     # may be steps per degree for example
+delta_step_pin                              0.11              # Pin for delta stepper step signal
+delta_dir_pin                                2.13             # Pin for delta stepper direction
+delta_en_pin                                2.12             # Pin for delta enable
+delta_current                               2.0              # Z stepper motor current
+delta_max_rate                            15000.0            # mm/min
+delta_acceleration                       100.0            # mm/secÂ²
+
+
+
 ## Extruder module configuration
 
 # See http://smoothieware.org/extruder
