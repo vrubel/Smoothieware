@@ -338,32 +338,32 @@ endstops_enable                              true             # 使能限位开�
 
 cartesian_homing                             true             # 使能G28归零
 
-alpha_min_endstop                            1.29^               # Pin to read min endstop, add a ! to invert if endstop is NO connected to ground
+alpha_min_endstop                            1.29^!               # Pin to read min endstop, add a ! to invert if endstop is NO connected to ground
 
-alpha_max_endstop                            1.28^            # Pin to read max endstop, uncomment this and comment the above if using max endstops
+alpha_max_endstop                            1.28^!            # Pin to read max endstop, uncomment this and comment the above if using max endstops
 
 alpha_homing_direction                       home_to_min      # Or set to home_to_max and set alpha_max and uncomment the alpha_max_endstop
 
 alpha_min				     0
 alpha_max                                    300                # This gets loaded as the current position after homing when home_to_max is set
 
-beta_min_endstop                             1.27^               # Pin to read min endstop, add a ! to invert if endstop is NO connected to ground
+beta_min_endstop                             1.27^!               # Pin to read min endstop, add a ! to invert if endstop is NO connected to ground
 
-beta_max_endstop                             1.26^            # Pin to read max endstop, uncomment this and comment the above if using max endstops
+beta_max_endstop                             1.26^!            # Pin to read max endstop, uncomment this and comment the above if using max endstops
 
 beta_homing_direction                        home_to_min      # Or set to home_to_max and set alpha_max and uncomment the alpha_max_endstop
 
 beta_min				     0
 beta_max                                     300                # This gets loaded as the current position after homing when home_to_max is set
 
-gamma_min_endstop                            1.25^               # Pin to read min endstop, add a ! to invert if endstop is NO connected to ground
+gamma_min_endstop                            1.25^!               # Pin to read min endstop, add a ! to invert if endstop is NO connected to ground
 
-gamma_max_endstop                            1.24^            # Pin to read max endstop, uncomment this and comment the above if using max endstops
+gamma_max_endstop                            1.24^!            # Pin to read max endstop, uncomment this and comment the above if using max endstops
 
-gamma_homing_direction                       home_to_min      # Or set to home_to_max and set alpha_max and uncomment the alpha_max_endstop
+gamma_homing_direction                       home_to_max      # Or set to home_to_max and set alpha_max and uncomment the alpha_max_endstop
 
 gamma_min                                    0      
-gamma_max                                    500
+gamma_max                                    80
   
 
 alpha_max_travel                             1000             # 归零时X轴移动的最大距离mm
@@ -372,6 +372,9 @@ beta_max_travel                              1000             #
 
 gamma_max_travel                             1000             # 
 
+alpha_limit_enable			true
+beta_limit_enable			true
+gamma_limit_enable		true
 
 
 # Endstops home at their fast feedrate first, then once the endstop is found they home again at their slow feedrate for accuracy
